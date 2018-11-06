@@ -1,77 +1,17 @@
  <html>
-  <head>
+ <head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene><a-plane color="black" height="100" width="100" rotation="-90 0 0"></a-plane>
-
-      <a-box position="-3 0.5 -2" rotation="0 45 0" color="#4CC3D9"></a-box>
-
-      <a-sphere>
-
-      <a-sphere position="8 7.2 -4" radius="1.25" color="#EF2D5E"></a-sphere><a-ring><a-box>
-
-      <a-cylinder position="5 1.75 -9" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder><a-cone>
-        
-      <a-plane position="0 2 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane><a-plane>
-      
-        <a-sky id="boxTexture" src="https://am24.akamaized.net/tms/cnt/uploads/2012/12/Platform9-3-41.jpg"></a-sky>
-
-    </a-scene>
-
-
-  </body>
-</html
-<html>
-  <head>
-    <title>Basic Scene with Environment - A-Frame</title>
-    <meta name="description" content="Basic Scene with Environment - A-Frame">
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-    <script src="https://unpkg.com/fdist/aframe-environment-component.min.js"></script>
-  </head>
-  <body>
-  <a-scene environment="preset: forest">
-      <a-assets>
-        <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-      </a-assets>
-      
-      <a-box position="0 2 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
-        <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
-          to="0 2.2 -5"></a-animation>
-        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
-        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
-        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      </a-box>
-
-      <a-text value="Welcome to Hogwarts!" color="#FAFAFA" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
-      
-      <a-cylinder position="10 10 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      
-      <a-camera>
-        <a-cursor color="#FAFAFA"></a-cursor>
-      </a-camera>
-    </a-scene>
-  </body>
+  <a-assets>
+     <a-asset-item id="Cell1-obj" src="Cell1.obj"></a-asset-item> 
+     <a-asset-item id="Cell1-mtl" src="Cell1.mtl"></a-asset-item> 
+</a-assets>
+<a-scene>
+<a-entity obj-model="obj: #Cell1-obj; mtl: #Cell1-mtl" scale="0.01 0.01 0.01" rotation="-90 0 0"></a-entity>
+<a-plane color="black" height="100" width="100" rotation="-90 0 0"></a-plane>
+<a-sky color="#6EBAA7"></a-sky> 
+<a-text value="Welcome To The Great Plant Cell!"></a-text>
+</a-scene>
+</body>
 </html>
-<a-text value="Hello, Fellow Potterheads!"></a-text>
-<a-light type="ambient" color="#222"></a-light>
-<a-plane color="black" height="100" width="100" rotation="-90 0 0">
-<a-assets>
-     <a-asset-item id="Scar-obj" src="/path/to/Scar.obj"></a-asset-item>
-          <a-asset-item id="Scar-mtl" src="/path/to/Scar.mtl"></a-asset-item>
-</a-assets>
-<a-entity obj-model="obj: #Scar-obj; mtl: #Scar-mtl"></a-entity>
-audio src="https://cdn.aframe.io/basic-guide/audio/Theme.mp3" autoplay
-preload>
-</audio>
-<a-light color="red" position="-1 1 0"></a-light>
- <a-asset-item id="Hallows-obj" src="/path/to/Hallows.obj"></a-asset-item>
-          <a-asset-item id="Hallows-mtl" src="/path/to/Hallows.mtl"></a-asset-item>
-</a-assets>
-<a-entity obj-model="obj: #Hallows-obj; mtl: #Hallows-mtl"></a-entity>
-
-
-
-
-
-
