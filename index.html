@@ -61,6 +61,19 @@
 
 
 <a-text value="Cell wall/membrane controls what enters and leaves the cell and provides structure = RED" color="#FAFAFA" position="-8.698 -0.630 -2.333" scale="1.5 1.5 1.5"></a-text>
+
+<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
+<a-text id="Welcome to the Great Plant Cell" visible = "false" value="Welcome to your new room!" position="-1.5 4 -5" color="#000" scale="1.5 1.5 1.5"></a-text>
+
+<a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#F44336"
+event-set__enter="_event: mouseenter; _target: #Welcome to the Great Plant Cell; visible: true"
+event-set__leave="_event: mouseleave; _target: #Welcome to the Great Plant Cell; visible: false">
+</a-box>
+
+<a-camera>
+<a-cursor></a-cursor>
+</a-camera>
 </a-scene>
 </body>
 </html>
